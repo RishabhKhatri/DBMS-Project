@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+.heading{
+	font-family: "roboto";
+	font-size: 50px;
+}
+.para{
+	font-family: "roboto";
+	font-size: 24px;
+}
