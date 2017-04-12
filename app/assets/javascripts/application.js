@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+    document.getElementById("myNav").style.width = "0%";
+}
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
