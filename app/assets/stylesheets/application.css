@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
 .heading{
 	font-family: "roboto";
 	font-size: 50px;
@@ -20,4 +24,10 @@
 .para{
 	font-family: "roboto";
 	font-size: 24px;
+}
+
+.mynav{
+	font-family: "roboto";
+	font-size: 18px;
+	background: 
 }
