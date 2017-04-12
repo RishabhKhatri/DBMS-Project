@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets"
 @import "bootstrap"
 
+body{
+	margin: 0;
+}
+
 .heading{
 	font-family: "roboto";
 	font-size: 50px;
@@ -27,7 +31,56 @@
 }
 
 .mynav{
+	background: #06f;
+	color: #000;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
 	font-family: "roboto";
 	font-size: 18px;
-	background: 
+}
+
+.mynav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#nav_items li{
+	float: left;
+}
+
+#login li{
+	float: right;
+}
+
+#title a{
+	display: block;
+	color: #000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 0.4s;
+}
+
+#title a:hover{
+	color: #fff;
+	transition: 0.4s;
+}
+
+.mynav ul li a{
+	display: block;
+	color: #000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 0.4s;
+}
+
+.mynav ul li a:hover{
+	background: #fff;
+	color: #06f;
+	transition: 0.4s;
 }

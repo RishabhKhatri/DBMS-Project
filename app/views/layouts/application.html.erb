@@ -32,30 +32,33 @@
   </head>
 
   <body>
-  	<nav class="navbar navbar-default mynav">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span> 
-	      </button>
-	      <a class="navbar-brand" href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home</a></li>
-	        <li><a href="#">About</a></li>
-	        <li><a href="#">Help</a></li> 
-	        <li><a href="#">Contact</a></li> 
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Sign Up</a></li>
-	        <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
-    <%= yield %>
+  	<nav class="mynav">
+  		<div class="container-fluid">
+  			<div class="row">
+  				<div class="col-md-4 col-sm-4 hidden-xs">
+  					<ul id="nav_items">
+  						<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  						<li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> Notifications</a></li>
+  						<li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Messages</a></li>
+  					</ul>
+  				</div>
+  				<div class="col-md-4 col-sm-4 col-xs-8">
+  					<span id="title"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></span>
+  				</div>
+  				<div class="col-md-4 col-sm-4 hidden-xs">
+  					<ul id="login">
+  						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+  						<li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Signup</a></li>
+  					</ul>
+  				</div>
+  				<div class="col-xs-4 hidden-sm hidden-md hidden-lg">
+  					<span><i class="fa fa-bars" aria-hidden="true"></i></span>
+  				</div>
+  			</div>
+  		</div>
+  	</nav>
+  	<div style="padding: 20px;margin-top: 30px;">
+  		<%= yield %>
+  	</div>
   </body>
 </html>
