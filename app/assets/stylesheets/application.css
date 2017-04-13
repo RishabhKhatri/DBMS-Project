@@ -31,14 +31,14 @@ body{
 }
 
 .mynav{
-	background: #06f;
+	background: #fff;
 	color: #fff;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 999;
 	font-family: "roboto";
-	font-size: 18px;
+	font-size: 16px;
 	box-shadow: 0 0 5px 5px #ddd;
 }
 
@@ -51,7 +51,6 @@ body{
 
 #nav_items li{
 	float: left;
-	/*display: inline;*/
 }
 
 #login li{
@@ -60,16 +59,17 @@ body{
 
 #title a{
 	display: block;
-	color: #fff;
+	color: #0084b4;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 	transition: 0.4s;
+	border-bottom: thick solid #fff;
 }
 
 #title a:hover{
-	color: #fff;
 	transition: 0.4s;
+	border-bottom: thick solid #0084b4;
 }
 
 .mynav ul li a{
@@ -79,12 +79,14 @@ body{
 	padding: 14px 16px;
 	text-decoration: none;
 	transition: 0.4s;
+	border-bottom: thick solid #fff;
 }
 
 .mynav ul li a:hover{
 	background: #fff;
 	color: #06f;
 	transition: 0.4s;
+	border-bottom: thick solid #0084b4;
 }
 
 .overlay {
