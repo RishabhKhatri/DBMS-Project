@@ -36,15 +36,16 @@
                 <a href="#" class="drop_toggle"><%= gravatar_for current_user, size: 30 %><%= current_user.name %></a>
                 <ul class="content">
                   <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", '#' %></li>
+                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                   <li class="divider"></li>
                   <li>
                     <%= link_to "Log out", logout_path, method: "delete" %>
                   </li>
                 </ul>
               </li>
-              <li><%= link_to "Users", '#' %></li>
-          <% else %>
+              <li><%= link_to "Users", users_path %></li>
+
+        <% else %>
 					  <li><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
 					  <li><a href="/signup"><i class="fa fa-user-circle" aria-hidden="true"></i> Signup</a></li>
           <% end %>
