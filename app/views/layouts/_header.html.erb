@@ -7,8 +7,10 @@
 				<ul id="nav_items">
 					<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
           <li><a href="/about">About</a></li>
-          <!--<li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> Notifications</a></li>-->
-          <!--<li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Messages</a></li>-->
+          <% if logged_in? %>
+            <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> Notifications</a></li>
+            <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Messages</a></li>
+          <% end %>
 				</ul>
 			</div>
 
@@ -29,8 +31,25 @@
       <!-- For lg, md, sm -->
 			<div class="col-md-5 col-sm-4 col-lg-5 hidden-xs">
 				<ul id="login">
-					<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-					<li><a href="/signup"><i class="fa fa-user-circle" aria-hidden="true"></i> Signup</a></li>
+          <% if logged_in? %>
+              <li><%= link_to "Users", '#' %></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Account <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", '#' %></li>
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to "Log out", logout_path, method: "delete" %>
+                  </li>
+                </ul>
+              </li>
+          <% else %>
+					  <li><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+					  <li><a href="/signup"><i class="fa fa-user-circle" aria-hidden="true"></i> Signup</a></li>
+          <% end %>
 				</ul>
 			</div>
 
@@ -52,10 +71,16 @@
   <div class="overlay-content">
     <ul class="xs-nav">
       <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-      <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> Notifications</a></li>
-      <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Messages</a></li>
-      <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-      <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Signup</a></li>
+      <% if logged_in? %>
+        <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> Notifications</a></li>
+        <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Messages</a></li>
+          <li><%= link_to "Profile", current_user %></li>
+          <li><%= link_to "Settings", '#' %></li>
+          <%= link_to "Log out", logout_path, method: "delete" %>
+      <% else %>
+        <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+        <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Signup</a></li>
+      <% end %>
     </ul>
   </div>
 </div>
