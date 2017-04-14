@@ -41,7 +41,7 @@ body{
   box-shadow: 0 0 2px 2px #ddd;
 }
 
-.mynav ul{
+#nav_items{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -71,7 +71,7 @@ body{
   border-bottom: thick solid #0084b4;
 }
 
-.mynav ul li a{
+#nav_items li a{
   display: block;
   color: #515151;
   text-align: center;
@@ -81,7 +81,24 @@ body{
   border-bottom: thick solid #fff;
 }
 
-.mynav ul li a:hover{
+#nav_items li a:hover{
+  background: #fff;
+  color: #06f;
+  transition: 0.4s;
+  border-bottom: thick solid #0084b4;
+}
+
+#login li a{
+  display: block;
+  color: #515151;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.4s;
+  border-bottom: thick solid #fff;
+}
+
+#login li a:hover{
   background: #fff;
   color: #06f;
   transition: 0.4s;
@@ -175,6 +192,9 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 
 .gravatar_edit {
@@ -206,4 +226,37 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.content{
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.drop_toggle:hover + .content{
+  display: block !important;
+}
+
+.content:hover{
+  display: block !important;
+}
+
+.content a{
+  display: block;
+  color: #515151;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.4s;
+  border-bottom: thick solid #fff;
+}
+
+.content a:hover{
+  background: #fff;
+  color: #06f;
+  transition: 0.4s;
+  border-bottom: thick solid #0084b4;
 }
