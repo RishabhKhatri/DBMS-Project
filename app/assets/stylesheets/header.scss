@@ -1,0 +1,171 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+.myNav{
+  background: #fff;
+  color: #515151;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  font-family: "roboto", "sans-serif";
+  font-size: 14px;
+  box-shadow: 0 0 2px 2px #ddd;
+}
+
+.home{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  li{
+    float: left;
+    a{
+      display: block;
+      text-align: center;
+      padding: 12px 14px;
+      text-decoration: none;
+      transition: 0.3s;
+      border-bottom: thick solid #fff;
+      &:hover{
+        transition: 0.3s;
+        border-bottom: thick solid #0084b4;
+      }
+    }
+  }
+}
+
+#title a{
+  display: block;
+  color: #0084b4;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom: thick solid #fff;
+}
+
+.login{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.login > li{
+  float: right;
+}
+
+.login >li > a{
+  display: block;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom: thick solid #fff;
+  &:hover{
+    transition: 0.3s;
+    border-bottom: thick solid #0084b4;
+  }
+}
+
+.drop{
+  display: none;
+  position: absolute;
+  width: 35%;
+  &:hover{
+    display: block;
+  }
+}
+
+.content{
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  &:hover{
+    display: block !important;
+  }
+}
+
+.drop_toggle:hover + .drop{
+  display: block !important;
+}
+
+.content a{
+  display: block;
+  color: #0084b4 !important;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: 0.3s;
+  background: #EFEFEF;
+  border-bottom: thick solid #EFEFEF;
+  &:hover{
+    color: #0084b4;
+    transition: 0.3s;
+    border-bottom: thick solid #0084b4;
+  }
+}
+
+.overlay {
+  height: 30%;
+  width: 0%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.4s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 17%;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.overlay a {
+  padding: 8px;
+  font-family: "roboto", "sans-serif";
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #fff;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px !important;
+}
+
+.xs-nav li{
+  list-style-type: none;
+}
+
+.icon-bar{
+  color: #515151 !important;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .closebtn {
+    font-size: 30px !important;
+    top: 15px;
+    right: 35px;
+  }
+}

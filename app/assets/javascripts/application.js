@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require particles.min
 //= require_tree .
 
 function openNav() {
